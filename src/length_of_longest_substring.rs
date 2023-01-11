@@ -1,5 +1,6 @@
-#![allow(dead_code)]
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
+#![allow(dead_code)]
 pub struct Solution;
 
 impl Solution {

@@ -1,6 +1,11 @@
+mod add_two_numbers;
 mod container_with_most_water;
 mod length_of_longest_substring;
 mod merge_two_sorted_lists;
+mod reverse_integer;
+mod three_sum;
+mod three_sum_closest;
+mod two_sum;
 mod zigzag_conversion;
 
 // use crate::container_with_most_water;
@@ -44,5 +49,20 @@ mod test {
             zigzag_conversion::Solution::convert("PAYPALISHIRING".to_string(), 3),
             "PAHNAPLSIIGYIR"
         );
+    }
+
+    #[test]
+    fn test_add_two_numbers() {
+        unimplemented!();
+    }
+
+    #[test]
+    fn test_three_sum_closest() {
+        unimplemented!();
+    }
+
+    #[test]
+    fn test_reverse_integer() {
+        assert_eq!(reverse_integer::Solution::reverse(123), 321);
     }
 }
