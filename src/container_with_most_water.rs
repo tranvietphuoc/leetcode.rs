@@ -9,8 +9,8 @@ impl Solution {
         let arr = height.as_slice();
 
         let mut s = 0;
-        let mut i: usize = 0_usize;
-        let mut j: usize = arr.len() - 1_usize;
+        let mut i: usize = 0;
+        let mut j: usize = arr.len() - 1;
 
         while i < j {
             let h = cmp::min(arr[i], arr[j]);
@@ -18,11 +18,11 @@ impl Solution {
             s = cmp::max(s, h * w);
 
             while (arr[i] <= h) && (i < j) {
-                i += 1_usize;
+                i += 1;
             }
 
             while (arr[j] <= h) && (i < j) {
-                j -= 1_usize;
+                j -= 1;
             }
             // println!("{} {} {}", i, j, s);
         }
