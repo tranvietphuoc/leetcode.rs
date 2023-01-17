@@ -2,10 +2,10 @@
 
 use std::cmp::Ordering::*;
 
-pub struct Node<K, V> {
+pub struct Node<K: Ord> {
     key: K,
     left: BST<K>,
-    right: BST<V>,
+    right: BST<K>,
 }
 
 pub struct BST<K: Ord>(Option<Box<Node<K>>>);
@@ -55,7 +55,7 @@ impl<K: Ord> BST<K> {
         false
     }
 
-    pub fn contains(&mut self, key: K) -> bool {
+    pub fn contains(&self, key: K) -> bool {
         let mut tree = self;
 
         while let Some(ref node) = tree.0 {

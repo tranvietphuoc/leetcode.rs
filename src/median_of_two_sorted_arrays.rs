@@ -27,6 +27,8 @@ impl Solution {
             nums.extend_from_slice(&nums2[j..]);
         }
 
+        println!("{:?}", nums);
+
         let size = nums.len();
         let mid = size / 2;
 

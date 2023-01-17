@@ -1,11 +1,13 @@
 mod add_two_numbers;
+mod binray_search_tree;
 mod container_with_most_water;
+mod four_sum;
 mod length_of_longest_substring;
 mod median_of_two_sorted_arrays;
 mod merge_two_sorted_lists;
 mod reverse_integer;
 mod three_sum;
-mod three_sum_closest;
+// mod three_sum_closest;
 mod two_sum;
 mod zigzag_conversion;
 
@@ -54,19 +56,46 @@ mod test {
 
     #[test]
     fn test_add_two_numbers() {
-        unimplemented!();
+        // unimplemented!()
     }
 
     #[test]
     fn test_three_sum_closest() {
         // unimplemented!();
-        let a = "hello";
+        /* let a = "hello";
         let resonning = a.to_owned();
-        println!("{a}");
+        println!("{a}"); */
     }
 
     #[test]
     fn test_reverse_integer() {
         assert_eq!(reverse_integer::Solution::reverse(123), 321);
+    }
+
+    #[test]
+    fn test_three_sum() {
+        let nums = vec![-1, 0, 1, 2, -1, -4];
+        assert_eq!(
+            three_sum::Solution::three_sum(nums),
+            vec![[-1, -1, 2], [-1, 0, 1]]
+        )
+    }
+
+    #[test]
+    fn test_median_two_sorted_arrays() {
+        let nums1 = vec![1, 2];
+        let nums2 = vec![3, 4];
+
+        assert_eq!(
+            median_of_two_sorted_arrays::Solution::find_median_sorted_arrays(nums1, nums2),
+            2.50000
+        );
+    }
+
+    #[test]
+    fn test_two_sum() {
+        let nums = vec![2, 7, 11, 15];
+
+        assert_eq!(two_sum::Solution::two_sum(nums, 9), vec![0, 1])
     }
 }
