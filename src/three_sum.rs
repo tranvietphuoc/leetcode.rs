@@ -15,6 +15,7 @@ impl Solution {
         }
 
         for (i, &val) in arr.iter().enumerate() {
+            // if current value is equal to the previous value, then move to next loop
             if i > 0 && val == arr[i - 1] {
                 continue;
             }

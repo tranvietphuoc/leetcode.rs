@@ -1,6 +1,7 @@
 mod add_two_numbers;
 mod container_with_most_water;
 mod length_of_longest_substring;
+mod median_of_two_sorted_arrays;
 mod merge_two_sorted_lists;
 mod reverse_integer;
 mod three_sum;
@@ -58,7 +59,10 @@ mod test {
 
     #[test]
     fn test_three_sum_closest() {
-        unimplemented!();
+        // unimplemented!();
+        let a = "hello";
+        let resonning = a.to_owned();
+        println!("{a}");
     }
 
     #[test]
