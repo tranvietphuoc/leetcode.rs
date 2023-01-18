@@ -10,6 +10,7 @@ mod three_sum;
 // mod three_sum_closest;
 mod two_sum;
 mod zigzag_conversion;
+mod depth_first_search;
 
 // use crate::container_with_most_water;
 // use crate::length_of_longest_substring;

@@ -1,6 +1,4 @@
 // https://leetcode.com/problems/median-of-two-sorted-arrays/
-//
-//
 
 pub struct Solution;
 
@@ -27,7 +25,7 @@ impl Solution {
             nums.extend_from_slice(&nums2[j..]);
         }
 
-        println!("{:?}", nums);
+        // println!("{:?}", nums);
 
         let size = nums.len();
         let mid = size / 2;
