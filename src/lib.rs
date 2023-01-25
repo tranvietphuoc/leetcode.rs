@@ -8,9 +8,9 @@ mod merge_two_sorted_lists;
 mod reverse_integer;
 mod three_sum;
 // mod three_sum_closest;
+// mod depth_first_search;
 mod two_sum;
 mod zigzag_conversion;
-mod depth_first_search;
 
 // use crate::container_with_most_water;
 // use crate::length_of_longest_substring;
@@ -98,5 +98,21 @@ mod test {
         let nums = vec![2, 7, 11, 15];
 
         assert_eq!(two_sum::Solution::two_sum(nums, 9), vec![0, 1])
+    }
+
+    #[test]
+    fn test_four_sum() {
+        let nums1 = vec![1, 0, -1, 0, -2, 2];
+        let target1 = 0;
+        let nums2 = vec![2, 2, 2, 2, 2];
+        let target2 = 8;
+        assert_eq!(
+            four_sum::Solution::four_sum(nums1, target1),
+            vec![[-2, -1, 1, 2], [-2, 0, 0, 2], [-1, 0, 0, 1]]
+        );
+        assert_eq!(
+            four_sum::Solution::four_sum(nums2, target2),
+            vec![[2, 2, 2, 2]]
+        );
     }
 }
