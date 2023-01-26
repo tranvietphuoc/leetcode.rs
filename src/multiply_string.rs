@@ -9,21 +9,19 @@ impl Solution {
             return "0".to_string();
         }
 
+        // reverse string and convert to vector of u32s
         let mut first = num1
             .chars()
+            .rev()
             .map(|e| e.to_digit(10).unwrap())
             .collect::<Vec<u32>>();
         let mut second = num2
             .chars()
+            .rev()
             .map(|e| e.to_digit(10).unwrap())
             .collect::<Vec<u32>>();
 
-        // reverse the vectors to track the multiply easier
-        first.reverse();
-        second.reverse();
-
-        let n = first.len() + second.len();
-        let mut answer = vec![0; n];
+        let mut answer = vec![0; first.len() + second.len()];
 
         // println!("{:?}", first);
         for (index, digit) in second.into_iter().enumerate() {
@@ -34,8 +32,8 @@ impl Solution {
             answer.pop();
         }
 
-        answer.reverse();
-        answer.into_iter().map(|e| e.to_string()).collect()
+        // reverse vec<u32> to get result and convert to string
+        answer.into_iter().rev().map(|e| e.to_string()).collect()
     }
 
     fn add_strings(result: Vec<u32>, answer: Vec<u32>) -> Vec<u32> {
@@ -47,7 +45,7 @@ impl Solution {
         let mut ans_it = answer.iter();
         let mut zip = Vec::new();
 
-        // create a zip longest like
+        // create a zip_longest like
         loop {
             match (rs_it.next(), ans_it.next()) {
                 (Some(x), Some(y)) => zip.push((*x, *y)),
