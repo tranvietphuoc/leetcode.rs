@@ -21,9 +21,12 @@ impl Solution {
             .map(|e| e.to_digit(10).unwrap())
             .collect::<Vec<u32>>();
 
+        // store the multiplication result of each digit of second number with first number
         let mut answer = vec![0; first.len() + second.len()];
 
         // println!("{:?}", first);
+        // mutiply each digit in second number by the first number
+        // and add each result to answer
         for (index, digit) in second.into_iter().enumerate() {
             answer = Self::add_strings(Self::multiply_one_digit(&first, digit, index), answer);
         }
@@ -32,7 +35,7 @@ impl Solution {
             answer.pop();
         }
 
-        // reverse vec<u32> to get result and convert to string
+        // reverse vec<u32> to get result and convert to string to get the final answer
         answer.into_iter().rev().map(|e| e.to_string()).collect()
     }
 
@@ -66,14 +69,19 @@ impl Solution {
     }
 
     fn multiply_one_digit(first: &Vec<u32>, digit2: u32, num_zeros: usize) -> Vec<u32> {
+        // insert 0s at the begining based on the current digit's place
         let mut current_result = vec![0; num_zeros];
 
         let mut carry = 0_u32;
 
+        // multiply first number with current digit of second number
         for digit in first {
             let mul = *digit * digit2 + carry;
 
+            // set carry to the tens place digit of multiplication
             carry = mul / 10;
+
+            // append to current result
             current_result.push(mul % 10);
         }
 
