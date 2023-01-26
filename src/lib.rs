@@ -9,6 +9,7 @@ mod reverse_integer;
 mod three_sum;
 // mod three_sum_closest;
 // mod depth_first_search;
+mod multiply_string;
 mod two_sum;
 mod zigzag_conversion;
 
