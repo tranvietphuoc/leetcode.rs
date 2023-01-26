@@ -116,4 +116,11 @@ mod test {
             vec![[2, 2, 2, 2]]
         );
     }
+    #[test]
+    fn test_multiply_string() {
+        assert_eq!(
+            multiply_string::Solution::multiply("6913259244".to_string(), "71103343".to_string()),
+            "491555843274052692".to_string()
+        );
+    }
 }
