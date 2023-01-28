@@ -10,15 +10,15 @@ impl Solution {
         }
 
         // reverse string and convert to vector of u32s
-        let mut first = num1
+        let first = num1
             .chars()
             .rev()
-            .map(|e| e.to_digit(10).unwrap())
+            .map(|e| e.to_digit(10).unwrap()) // convert each digit to number base on radix 10
             .collect::<Vec<u32>>();
-        let mut second = num2
+        let second = num2
             .chars()
             .rev()
-            .map(|e| e.to_digit(10).unwrap())
+            .map(|e| e.to_digit(10).unwrap()) // // convert each digit to number base on radix 10
             .collect::<Vec<u32>>();
 
         // store the multiplication result of each digit of second number with first number

@@ -7,7 +7,7 @@ mod median_of_two_sorted_arrays;
 mod merge_two_sorted_lists;
 mod reverse_integer;
 mod three_sum;
-// mod three_sum_closest;
+mod three_sum_closest;
 // mod depth_first_search;
 mod multiply_string;
 mod two_sum;
