@@ -16,11 +16,11 @@ impl Solution {
         let mut d = s.chars().into_iter().collect::<VecDeque<_>>();
         let mut result = 0;
 
-        while d.len() > 0 {
+        while !d.is_empty() {
             let current = d.pop_front().unwrap(); // get the first element of vecdeque
 
             // then compare to the next element
-            if d.len() > 0 && roman[&d[0]] > roman[&current] {
+            if !d.is_empty() && roman[&d[0]] > roman[&current] {
                 let next = d.pop_front().unwrap();
                 result += roman[&next] - roman[&current];
                 // d.pop_front();
