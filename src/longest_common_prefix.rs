@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/longest-common-prefix/description/
+
 pub struct Solution;
 
 impl Solution {
