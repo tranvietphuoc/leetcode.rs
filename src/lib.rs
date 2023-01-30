@@ -9,6 +9,7 @@ mod reverse_integer;
 mod three_sum;
 // mod three_sum_closest;
 // mod depth_first_search;
+mod longest_common_prefix;
 mod multiply_string;
 mod roman_to_integer;
 mod two_sum;
@@ -130,6 +131,16 @@ mod test {
         assert_eq!(
             roman_to_integer::Solution::roman_to_int("III".to_string()),
             3
+        );
+    }
+
+    #[test]
+    fn test_longest_common_prefix() {
+        assert_eq!(
+            longest_common_prefix::Solution::longest_common_prefix(vec![
+                "flower".to_string(), "flow".to_string(), "flight".to_string()
+            ]),
+            "fl".to_string()
         );
     }
 }
