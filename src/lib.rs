@@ -7,9 +7,10 @@ mod median_of_two_sorted_arrays;
 mod merge_two_sorted_lists;
 mod reverse_integer;
 mod three_sum;
-mod three_sum_closest;
+// mod three_sum_closest;
 // mod depth_first_search;
 mod multiply_string;
+mod roman_to_integer;
 mod two_sum;
 mod zigzag_conversion;
 
@@ -121,6 +122,14 @@ mod test {
         assert_eq!(
             multiply_string::Solution::multiply("6913259244".to_string(), "71103343".to_string()),
             "491555843274052692".to_string()
+        );
+    }
+
+    #[test]
+    fn test_roman_to_int() {
+        assert_eq!(
+            roman_to_integer::Solution::roman_to_int("III".to_string()),
+            3
         );
     }
 }
