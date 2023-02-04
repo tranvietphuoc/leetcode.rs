@@ -11,6 +11,7 @@ mod three_sum;
 // mod depth_first_search;
 mod integer_to_roman;
 mod longest_common_prefix;
+mod minimum_common_value;
 mod multiply_string;
 mod roman_to_integer;
 mod two_sum;
@@ -157,6 +158,18 @@ mod test {
         assert_eq!(
             integer_to_roman::Solution::int_to_roman(58),
             "LVIII".to_string()
+        );
+    }
+
+    #[test]
+    fn test_minimum_common_value() {
+        assert_eq!(
+            minimum_common_value::Solution::get_common(vec![1, 2, 3], vec![2, 4]),
+            2
+        );
+        assert_eq!(
+            minimum_common_value::Solution::get_common(vec![1, 2, 3, 6], vec![2, 3, 4, 5]),
+            2
         );
     }
 }
