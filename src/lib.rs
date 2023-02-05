@@ -14,6 +14,7 @@ mod longest_common_prefix;
 mod longest_palindrome;
 mod minimum_common_value;
 mod multiply_string;
+mod reverse_bits;
 mod roman_to_integer;
 mod single_number;
 mod two_sum;
@@ -185,6 +186,14 @@ mod test {
         assert_eq!(
             longest_palindrome::Solution::longest_palindrome("cbbd".to_string()),
             "bb".to_string()
+        );
+    }
+
+    #[test]
+    fn test_reverse_bits() {
+        assert_eq!(
+            reverse_bits::Solution::reverse_bits(00000010100101000001111010011100),
+            964176192
         );
     }
 }
