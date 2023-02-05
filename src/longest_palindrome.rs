@@ -16,6 +16,7 @@ impl Solution {
             // even palindrome (length is even)
             low = i - 1;
             high = i;
+            // use .get() method because I'm unsure about bounds check of vector cloned
             while low >= 0 && high < length && cloned.get(low) == cloned.get(high) {
                 if high - low + 1 > max_length {
                     start = low;
@@ -29,6 +30,7 @@ impl Solution {
             // odd palindrome (length is odd)
             low = i - 1;
             high = i + 1;
+            // use .get() method because I'm unsure about bounds check of vector cloned
             while low >= 0 && high < length && cloned.get(low) == cloned.get(high) {
                 if high - low + 1 > max_length {
                     start = low;
@@ -49,10 +51,11 @@ impl Solution {
             .into_iter()
             .collect::<String>()
     }
-    fn check_palindrome(s: String) -> bool {
-        let s_ = s.clone();
-        let s_rev = s.chars().into_iter().rev().collect::<String>();
 
-        s_ == s_rev
-    }
+    // fn check_palindrome(s: String) -> bool {
+    //     let s_ = s.clone();
+    //     let s_rev = s.chars().into_iter().rev().collect::<String>();
+
+    //     s_ == s_rev
+    // }
 }
