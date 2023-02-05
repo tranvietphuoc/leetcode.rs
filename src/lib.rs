@@ -14,6 +14,7 @@ mod longest_common_prefix;
 mod longest_palindrome;
 mod minimum_common_value;
 mod multiply_string;
+mod number_of_1_bits;
 mod reverse_bits;
 mod roman_to_integer;
 mod single_number;
@@ -192,8 +193,16 @@ mod test {
     #[test]
     fn test_reverse_bits() {
         assert_eq!(
-            reverse_bits::Solution::reverse_bits(00000010100101000001111010011100),
+            reverse_bits::Solution::reverse_bits(0b00000010100101000001111010011100_u32),
             964176192
+        );
+    }
+
+    #[test]
+    fn test_number_of_1_bits() {
+        assert_eq!(
+            number_of_1_bits::Solution::hammingWeight(0b00000000000000000000000000001011_u32),
+            3
         );
     }
 }
