@@ -15,6 +15,7 @@ mod longest_palindrome;
 mod minimum_common_value;
 mod multiply_string;
 mod roman_to_integer;
+mod single_number;
 mod two_sum;
 mod valid_palindrome;
 mod zigzag_conversion;
