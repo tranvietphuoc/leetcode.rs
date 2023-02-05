@@ -3,7 +3,7 @@
 pub struct Solution;
 
 impl Solution {
-    pub fn single_number(nums: Vec<i32>) -> i32 {
+    /* pub fn single_number(nums: Vec<i32>) -> i32 {
         use std::collections::HashMap;
 
         let mut map = HashMap::new();
@@ -17,5 +17,10 @@ impl Solution {
         vec.sort_by(|a, b| a.1.cmp(&b.1));
 
         vec[0].0
+    } */
+
+    // other rust Solution
+    pub fn single_number(nums: Vec<i32>) -> i32 {
+        nums.into_iter().reduce(|a, b| a ^ b).unwrap()
     }
 }
