@@ -11,6 +11,7 @@ mod three_sum;
 // mod depth_first_search;
 mod integer_to_roman;
 mod longest_common_prefix;
+mod longest_palindrome;
 mod minimum_common_value;
 mod multiply_string;
 mod roman_to_integer;
@@ -170,6 +171,18 @@ mod test {
         assert_eq!(
             minimum_common_value::Solution::get_common(vec![1, 2, 3, 6], vec![2, 3, 4, 5]),
             2
+        );
+    }
+
+    #[test]
+    fn test_longest_palindrome() {
+        assert_eq!(
+            longest_palindrome::Solution::longest_palindrome("babad".to_string()),
+            "bab".to_string()
+        );
+        assert_eq!(
+            longest_palindrome::Solution::longest_palindrome("cbbd".to_string()),
+            "bb".to_string()
         );
     }
 }
