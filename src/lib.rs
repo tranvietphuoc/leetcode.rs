@@ -15,6 +15,7 @@ mod longest_palindrome;
 mod minimum_common_value;
 mod multiply_string;
 mod number_of_1_bits;
+mod power_of_two;
 mod reverse_bits;
 mod roman_to_integer;
 mod single_number;
