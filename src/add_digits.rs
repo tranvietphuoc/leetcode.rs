@@ -32,4 +32,18 @@ impl Solution {
         }
         result
     }
+
+    /* pub fn add_digits(num: i32) -> i32 {
+        match num {
+            0 => return 0,
+            _ => {
+                num = num % 9;
+                if num == 0 {
+                    return 0;
+                } else {
+                    return num;
+                }
+            }
+        }
+    } */
 }
