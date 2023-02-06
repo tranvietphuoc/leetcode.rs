@@ -9,6 +9,7 @@ mod reverse_integer;
 mod three_sum;
 // mod three_sum_closest;
 // mod depth_first_search;
+mod add_digits;
 mod integer_to_roman;
 mod longest_common_prefix;
 mod longest_palindrome;
