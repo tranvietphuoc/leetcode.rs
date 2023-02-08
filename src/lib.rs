@@ -18,6 +18,7 @@ mod multiply_string;
 mod number_of_1_bits;
 mod power_of_two;
 mod remove_duplicates_from_sorted_list;
+mod remove_nth_node_from_end_of_list;
 mod reverse_bits;
 mod roman_to_integer;
 mod single_number;
