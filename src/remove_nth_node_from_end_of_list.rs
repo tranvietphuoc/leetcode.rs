@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
 // definition of singly-linked list.
-#[derive(ParialEq, Eq, Clone, Debug)]
+#[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
     pub val: i32,
     pub next: Option<Box<ListNode>>,
