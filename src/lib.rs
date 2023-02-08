@@ -17,6 +17,7 @@ mod minimum_common_value;
 mod multiply_string;
 mod number_of_1_bits;
 mod power_of_two;
+mod remove_duplicates_from_sorted_list;
 mod reverse_bits;
 mod roman_to_integer;
 mod single_number;
