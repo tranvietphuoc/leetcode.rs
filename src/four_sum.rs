@@ -11,7 +11,7 @@ impl Solution {
 
     fn k_sum(nums: Vec<i32>, target: i32, start: usize, k: i32) -> Vec<Vec<i32>> {
         let mut res = Vec::new();
-        let mut numbers = nums.clone();
+        let numbers = nums.clone();
 
         // constraints:
         let num_lo_bound = -1 * 10_i32.pow(9);
