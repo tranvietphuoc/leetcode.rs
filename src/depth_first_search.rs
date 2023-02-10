@@ -40,7 +40,7 @@ impl Vertex {
     }
 }
 
-impl From<u32, u32> for Edge {
+impl From<(u32, u32)> for Edge {
     fn from(item: (u32, u32)) -> Self {
         Edge(item.0, item.1)
     }
