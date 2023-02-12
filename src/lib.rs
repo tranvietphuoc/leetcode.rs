@@ -74,13 +74,7 @@ mod test {
         // unimplemented!()
     }
 
-    #[test]
-    fn test_three_sum_closest() {
-        // unimplemented!();
-        /* let a = "hello";
-        let resonning = a.to_owned();
-        println!("{a}"); */
-    }
+ 
 
     #[test]
     fn test_reverse_integer() {
@@ -309,6 +303,18 @@ mod test {
         assert_eq!(
             depth_first_search::depth_first_search(&graph, root.into(), objective.into()),
             Some(correct_path)
+        );
+    }
+
+    #[test]
+    fn test_three_sum_closest() {
+        assert_eq!(
+            three_sum_closest::Solution::three_sum_closest(vec![-1, 2, 1, -4], -1),
+            2
+        );
+        assert_eq!(
+            three_sum_closest::Solution::three_sum_closest(vec![0, 0, 0], 1),
+            0
         );
     }
 }
