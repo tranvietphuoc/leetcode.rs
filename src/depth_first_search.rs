@@ -14,6 +14,7 @@ pub struct Graph {
 }
 
 impl Graph {
+    #[inline]
     pub fn new(vertices: Vec<Vertex>, edges: Vec<Edge>) -> Self {
         Self { vertices, edges }
     }
