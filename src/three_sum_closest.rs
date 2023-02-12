@@ -1,36 +1,39 @@
 pub struct Solution;
 
 impl Solution {
-    use std::cmp;
-    use std::collections::HashMap;
-
     pub fn three_sum_closest(nums: Vec<i32>, target: i32) -> i32 {
-        use std::cmp;
-        use std::collections::HashMap;
-
         let mut result = 0;
-        let mut counter = HashMap::new();
 
-        // 
-    }
+        let mut nums = nums;
+        nums.sort();
+        let mut three_sum = 0;
+        let length = nums.len();
+        let mut mn = i32::MAX;
 
-    fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32>{
-        use std::cmp;
-        use std::collections::HashMap;
+        let mut start: usize;
+        let mut end: usize;
+        let mut diff: i32;
 
-        let mut result = Vec::new();
-        let mut counter = HashMap::new();
+        for i in 0..length {
+            start = i + 1;
+            end = length - 1;
 
-        let mut tar = target;
+            while start < end {
+                three_sum = nums[i] + nums[start] + nums[end];
+                diff = (three_sum - target).abs();
 
-        for (i, val) in nums.into_iter().enumerate(){
-            let remainder = tar - val;
-            if !counter.contains_key(&remainder){
-                counter.insert(val, i as i32);
-            } else {
-                result.push(counter[&remainder]);
-                result.push(i as i32);
+                if diff < mn {
+                    mn = diff;
+                    result = three_sum;
+                }
+                if three_sum > target {
+                    end -= 1;
+                } else {
+                    start += 1;
+                }
             }
         }
+
+        result
     }
 }

@@ -1,18 +1,15 @@
+mod add_digits;
 mod add_two_numbers;
 mod binray_search_tree;
 mod container_with_most_water;
-mod four_sum;
-mod length_of_longest_substring;
-mod median_of_two_sorted_arrays;
-mod merge_two_sorted_lists;
-mod reverse_integer;
-mod three_sum;
-// mod three_sum_closest;
-mod add_digits;
 mod depth_first_search;
+mod four_sum;
 mod integer_to_roman;
+mod length_of_longest_substring;
 mod longest_common_prefix;
 mod longest_palindrome;
+mod median_of_two_sorted_arrays;
+mod merge_two_sorted_lists;
 mod minimum_common_value;
 mod multiply_string;
 mod number_of_1_bits;
@@ -20,8 +17,11 @@ mod power_of_two;
 mod remove_duplicates_from_sorted_list;
 mod remove_nth_node_from_end_of_list;
 mod reverse_bits;
+mod reverse_integer;
 mod roman_to_integer;
 mod single_number;
+mod three_sum;
+mod three_sum_closest;
 mod two_sum;
 mod valid_palindrome;
 mod zigzag_conversion;
@@ -74,13 +74,7 @@ mod test {
         // unimplemented!()
     }
 
-    #[test]
-    fn test_three_sum_closest() {
-        // unimplemented!();
-        /* let a = "hello";
-        let resonning = a.to_owned();
-        println!("{a}"); */
-    }
+ 
 
     #[test]
     fn test_reverse_integer() {
@@ -309,6 +303,18 @@ mod test {
         assert_eq!(
             depth_first_search::depth_first_search(&graph, root.into(), objective.into()),
             Some(correct_path)
+        );
+    }
+
+    #[test]
+    fn test_three_sum_closest() {
+        assert_eq!(
+            three_sum_closest::Solution::three_sum_closest(vec![-1, 2, 1, -4], -1),
+            2
+        );
+        assert_eq!(
+            three_sum_closest::Solution::three_sum_closest(vec![0, 0, 0], 1),
+            0
         );
     }
 }
