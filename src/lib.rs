@@ -74,8 +74,6 @@ mod test {
         // unimplemented!()
     }
 
- 
-
     #[test]
     fn test_reverse_integer() {
         assert_eq!(reverse_integer::Solution::reverse(123), 321);
@@ -309,7 +307,7 @@ mod test {
     #[test]
     fn test_three_sum_closest() {
         assert_eq!(
-            three_sum_closest::Solution::three_sum_closest(vec![-1, 2, 1, -4], -1),
+            three_sum_closest::Solution::three_sum_closest(vec![-1, 2, 1, -4], 1),
             2
         );
         assert_eq!(
